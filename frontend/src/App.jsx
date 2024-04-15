@@ -12,8 +12,10 @@ function App() {
   const handleCheckboxChange = (event) => {
     const itemName = event.target.name;
     const isChecked = event.target.checked;
+    // search through the products array for an item whose name property matches the itemName extracted from the checkbox event.
     const item = products.find((product) => product.name === itemName);
 
+    // If it's checked, it adds the selected item to the array, otherwise, it removes it.
     if (isChecked) {
       setSelectedItems([...selectedItems, item]);
     } else {
@@ -26,6 +28,7 @@ function App() {
   // This function handles the place order button click.
   const handlePlaceOrder = async () => {
     try {
+      // sending a POST request to the server's /api/place-order endpoint with the selected items as the request body
       const response = await axios.post(
         "http://localhost:5000/api/place-order",
         { selectedItems }
