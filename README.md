@@ -3,6 +3,7 @@ Technologies used:<br>
 - React with Vite for frontend,<br>
 - NodeJS/ExpressJS for backend<br>
 - TailwindCSS for styling<br>
+- Axios for HTTP request
 
 Steps to run the test:<br>
 - Clone or Download the repo including frontend and backend <br>
