@@ -41,7 +41,7 @@ function App() {
 
   return (
     <main className="container mx-auto p-3 px-10 md:px-0 grid grid-cols-1 sm:grid-cols-2">
-      <div className="">
+      <div >
         <h1 className="font-bold text-3xl my-6 text-center">Product List</h1>
         <ul className="md:w-[40%]  mx-auto ">
           {/* Showing all the products list */}
@@ -53,7 +53,7 @@ function App() {
                 onChange={handleCheckboxChange}
                 id={product.name}
               />
-              <label className="text-sm" for={product.name}>
+              <label className="text-sm" htmlFor={product.name}>
                 {`${product.name} - Price: $${product.price} - Weight: ${product.weight}g`}
               </label>
             </li>
